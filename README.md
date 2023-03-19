@@ -10,4 +10,4 @@ How to use:
 
 # Screenshots of the app
 
-<img src="https://user-images.githubusercontent.com/96539582/226185442-599a86d7-7b9e-45c7-b2fc-a35e48b9998d.jpg" width=100px>
+<img src="https://user-images.githubusercontent.com/96539582/226185442-599a86d7-7b9e-45c7-b2fc-a35e48b9998d.jpg" width=500px>
