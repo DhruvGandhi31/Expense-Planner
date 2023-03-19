@@ -1,0 +1,58 @@
+
+//below is the formatting code of transaction_list which is written under ListView.builder
+Card(
+                  child: Row(children: [
+                    Container(
+                      //color: Colors.grey, --> invalid as color and decoration cannot be used at same time
+                      //To add background color in a container add it in decoration
+                      margin: EdgeInsets.symmetric(
+                        vertical: 10,
+                        horizontal: 15,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                            color: Theme.of(context).primaryColorDark),
+                        //add the color here
+                        //color: Theme.of(context).primaryColor,
+                      ),
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                          'Rs. ${transactions[index].amount.toStringAsFixed(0)}',
+                          //tx.amount.toString(),
+                          //'\$${tx.amount}'
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            fontFamily: 'Quicksand',
+                            //fontStyle: FontStyle.italic,
+                            color: Theme.of(context).primaryColor,
+                          )
+                          // style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          transactions[index].title,
+                          //style: Theme.of(context).textTheme.titleLarge
+                          style: TextStyle(
+                            fontFamily: 'Quicksand',
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          // tx.date.toString(),
+
+                          DateFormat('dd-MM-yyyy')
+                              .format(transactions[index].date),
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontFamily: 'Open Sans',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                );
